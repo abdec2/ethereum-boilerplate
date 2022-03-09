@@ -6,14 +6,14 @@ import {
 } from "react-moralis";
 import { useIPFS } from "./useIPFS";
 
-export const useNFTTokenIds = () => {
+export const useNFTTokenIds = (address) => {
   const { token } = useMoralisWeb3Api();
   const { isInitialized, chainId } = useMoralis();
   const { resolveLink } = useIPFS();
   const [NFTTokenIds, setNFTTokenIds] = useState([]);
   const options = {
     chain: chainId,
-    address: "0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB",
+    address,
     limit: 10,
   };
   let data;

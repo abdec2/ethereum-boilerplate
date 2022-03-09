@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useMoralis } from "react-moralis";
 import {
   BrowserRouter as Router,
@@ -10,6 +10,7 @@ import Account from "components/Account/Account";
 import Chains from "components/Chains";
 import NFTBalance from "components/NFTBalance";
 import NFTTokenIds from "components/NFTTokenIds";
+import SearchCollections from "components/SearchCollections";
 import { Layout } from "antd";
 import "antd/dist/antd.css";
 import NativeBalance from "components/NativeBalance";
@@ -51,6 +52,11 @@ const styles = {
 const App = () => {
   const { isWeb3Enabled, enableWeb3, isAuthenticated, isWeb3EnableLoading } =
     useMoralis();
+  // 0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB cryptopunks
+  // 0x1A92f7381B9F03921564a437210bB9396471050C coolcat nft
+  const [contractAddress, setContractAddress] = useState(
+    "0x1A92f7381B9F03921564a437210bB9396471050C",
+  );
 
   useEffect(() => {
     const connectorId = window.localStorage.getItem("connectorId");
@@ -64,6 +70,7 @@ const App = () => {
       <Router>
         <Header style={styles.header}>
           <Logo />
+          <SearchCollections setContractAddress={setContractAddress} />
           <MenuItems />
           <div style={styles.headerRight}>
             <Chains />
@@ -76,7 +83,7 @@ const App = () => {
         <div style={styles.content}>
           <Switch>
             <Route path="/nftMarket">
-              <NFTTokenIds />
+              <NFTTokenIds address={contractAddress} />
             </Route>
 
             <Route path="/transactions">

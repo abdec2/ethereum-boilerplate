@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useMoralis } from "react-moralis";
 import { Card, Image, Tooltip, Modal, Input, Skeleton } from "antd";
 import {
@@ -26,8 +26,8 @@ const styles = {
   },
 };
 
-function NFTTokenIds() {
-  const { NFTTokenIds } = useNFTTokenIds();
+function NFTTokenIds({ address }) {
+  const { NFTTokenIds } = useNFTTokenIds(address);
   const { Moralis, chainId } = useMoralis();
   const [visible, setVisibility] = useState(false);
   const [receiverToSend, setReceiver] = useState(null);
@@ -37,7 +37,6 @@ function NFTTokenIds() {
   const { verifyMetadata } = useVerifyMetadata();
 
   async function transfer(nft, amount, receiver) {
-    console.log(nft, amount, receiver);
     const options = {
       type: nft?.contract_type?.toLowerCase(),
       tokenId: nft?.token_id,
@@ -53,7 +52,6 @@ function NFTTokenIds() {
 
     try {
       const tx = await Moralis.transfer(options);
-      console.log(tx);
       setIsPending(false);
     } catch (e) {
       alert(e.message);
@@ -70,7 +68,10 @@ function NFTTokenIds() {
     setAmount(e.target.value);
   };
 
-  console.log("NFTTokenIds", NFTTokenIds);
+  useEffect(() => {
+    console.log(NFTTokenIds);
+  }, [NFTTokenIds]);
+
   return (
     <div style={{ padding: "15px", maxWidth: "1030px", width: "100%" }}>
       <div style={styles.NFTs}>
