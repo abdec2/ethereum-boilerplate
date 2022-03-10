@@ -8,7 +8,7 @@ import { useIPFS } from "./useIPFS";
 
 export const useNFTTokenIds = (address) => {
   const { token } = useMoralisWeb3Api();
-  const { isInitialized, chainId } = useMoralis();
+  const { chainId } = useMoralis();
   const { resolveLink } = useIPFS();
   const [NFTTokenIds, setNFTTokenIds] = useState([]);
   const options = {
@@ -16,20 +16,22 @@ export const useNFTTokenIds = (address) => {
     address,
     limit: 10,
   };
-  let data;
+  // let data;
 
-  // const {
-  //     fetch: getNFTTokenIds,
-  //     data,
-  //     error,
-  //     isLoading,
-  // } = useMoralisWeb3ApiCall(token.getAllTokenIds, options);
+  const {
+    fetch: getNFTTokenIds,
+    data,
+    error,
+    isLoading,
+  } = useMoralisWeb3ApiCall(token.getAllTokenIds, {
+    chain: chainId,
+    address,
+    limit: 10,
+  },
+    { autoFetch: !!token && address !== "explore" });
 
-  useEffect(async () => {
-    if (isInitialized) {
-      data = await token.getAllTokenIds(options);
-    }
-    console.log(data);
+  useEffect(() => {
+
     if (data?.result) {
       const NFTs = data.result;
       for (let NFT of NFTs) {
@@ -41,7 +43,7 @@ export const useNFTTokenIds = (address) => {
       }
       setNFTTokenIds(NFTs);
     }
-  }, [data, isInitialized]);
+  }, [data]);
 
-  return { NFTTokenIds };
+  return { getNFTTokenIds, NFTTokenIds, error, isLoading };
 };
