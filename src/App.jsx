@@ -17,6 +17,7 @@ import NativeBalance from "components/NativeBalance";
 import "./style.css";
 import Text from "antd/lib/typography/Text";
 import MenuItems from "./components/MenuItems";
+import { Transactions } from "components/Transactions";
 const { Header, Footer } = Layout;
 
 const styles = {
@@ -88,7 +89,7 @@ const App = () => {
             </Route>
 
             <Route path="/transactions">
-              <NFTBalance />
+              <Transactions />
             </Route>
 
             <Route path="/nftBalance">
