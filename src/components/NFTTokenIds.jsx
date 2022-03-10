@@ -75,7 +75,8 @@ function NFTTokenIds({ address, setContractAddress }) {
   return (
     <div style={{ padding: "15px", maxWidth: "1030px", width: "100%" }}>
       <div style={styles.NFTs}>
-        {NFTTokenIds && !address !== "explore" &&
+        {NFTTokenIds &&
+          !address !== "explore" &&
           NFTTokenIds.map((nft, index) => {
             //Verify Metadata
             nft = verifyMetadata(nft);
@@ -87,8 +88,7 @@ function NFTTokenIds({ address, setContractAddress }) {
                     <FileSearchOutlined
                       onClick={() =>
                         window.open(
-                          `${getExplorer(chainId)}address/${nft.token_address
-                          }`,
+                          `${getExplorer(chainId)}address/${nft.token_address}`,
                           "_blank",
                         )
                       }
@@ -96,11 +96,7 @@ function NFTTokenIds({ address, setContractAddress }) {
                   </Tooltip>,
 
                   <Tooltip title="Buy This NFT">
-                    <ShoppingCartOutlined
-                      onClick={() =>
-                        handleBuyClick(nft)
-                      }
-                    />
+                    <ShoppingCartOutlined onClick={() => handleBuyClick(nft)} />
                   </Tooltip>,
                 ]}
                 style={{ width: 240, border: "2px solid #e7eaf3" }}
@@ -120,19 +116,17 @@ function NFTTokenIds({ address, setContractAddress }) {
             );
           })}
 
-        {NFTCollections && address === "explore" &&
+        {NFTCollections &&
+          address === "explore" &&
           NFTCollections.map((nft, index) => {
             //Verify Metadata
             return (
               <Card
                 hoverable
                 actions={[
-
                   <Tooltip title="View This Collection">
                     <RightCircleOutlined
-                      onClick={() =>
-                        setContractAddress(nft.addrs)
-                      }
+                      onClick={() => setContractAddress(nft.addrs)}
                     />
                   </Tooltip>,
                 ]}
@@ -161,9 +155,16 @@ function NFTTokenIds({ address, setContractAddress }) {
         onOk={() => alert("bought this nft")}
         okText="Buy"
       >
-        <img src={nftToBuy?.image} style={{ width: "250px", margin: "auto", borderRadius: "10px", marginBottom: "15px" }} />
+        <img
+          src={nftToBuy?.image}
+          style={{
+            width: "250px",
+            margin: "auto",
+            borderRadius: "10px",
+            marginBottom: "15px",
+          }}
+        />
       </Modal>
-
     </div>
   );
 }

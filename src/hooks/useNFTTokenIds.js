@@ -23,15 +23,17 @@ export const useNFTTokenIds = (address) => {
     data,
     error,
     isLoading,
-  } = useMoralisWeb3ApiCall(token.getAllTokenIds, {
-    chain: chainId,
-    address,
-    limit: 10,
-  },
-    { autoFetch: !!token && address !== "explore" });
+  } = useMoralisWeb3ApiCall(
+    token.getAllTokenIds,
+    {
+      chain: chainId,
+      address,
+      limit: 10,
+    },
+    { autoFetch: !!token && address !== "explore" },
+  );
 
   useEffect(() => {
-
     if (data?.result) {
       const NFTs = data.result;
       for (let NFT of NFTs) {

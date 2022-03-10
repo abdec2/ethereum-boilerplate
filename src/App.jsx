@@ -54,9 +54,7 @@ const App = () => {
     useMoralis();
   // 0xb47e3cd837dDF8e4c57F05d70Ab865de6e193BBB cryptopunks
   // 0x1A92f7381B9F03921564a437210bB9396471050C coolcat nft
-  const [contractAddress, setContractAddress] = useState(
-    "explore",
-  );
+  const [contractAddress, setContractAddress] = useState("explore");
 
   useEffect(() => {
     const connectorId = window.localStorage.getItem("connectorId");
@@ -83,7 +81,10 @@ const App = () => {
         <div style={styles.content}>
           <Switch>
             <Route path="/nftMarket">
-              <NFTTokenIds address={contractAddress} setContractAddress={setContractAddress} />
+              <NFTTokenIds
+                address={contractAddress}
+                setContractAddress={setContractAddress}
+              />
             </Route>
 
             <Route path="/transactions">

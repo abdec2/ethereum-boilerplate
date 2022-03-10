@@ -87,7 +87,8 @@ function NFTBalance() {
                       <FileSearchOutlined
                         onClick={() =>
                           window.open(
-                            `${getExplorer(chainId)}address/${nft.token_address
+                            `${getExplorer(chainId)}address/${
+                              nft.token_address
                             }`,
                             "_blank",
                           )
@@ -97,9 +98,7 @@ function NFTBalance() {
 
                     <Tooltip title="List this NFT">
                       <ShoppingCartOutlined
-                        onClick={() =>
-                          handleSellClick(nft)
-                        }
+                        onClick={() => handleSellClick(nft)}
                       />
                     </Tooltip>,
                   ]}
@@ -128,7 +127,15 @@ function NFTBalance() {
         onOk={() => alert("Sell this nft")}
         okText="Sell"
       >
-        <img src={nftToSell?.image} style={{ width: "250px", margin: "auto", borderRadius: "10px", marginBottom: "15px" }} />
+        <img
+          src={nftToSell?.image}
+          style={{
+            width: "250px",
+            margin: "auto",
+            borderRadius: "10px",
+            marginBottom: "15px",
+          }}
+        />
       </Modal>
     </div>
   );
