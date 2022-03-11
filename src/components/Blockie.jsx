@@ -12,7 +12,7 @@ function Blockie(props) {
   const { account, isAuthenticated } = useMoralis();
   if (!props.address && (!account || !isAuthenticated))
     return <Skeleton.Avatar active size={40} />;
-
+  console.log(props);
   return (
     <Blockies
       seed={

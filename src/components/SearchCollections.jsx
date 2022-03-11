@@ -14,14 +14,17 @@ function SearchCollections({ setContractAddress }) {
     <>
       <Select
         showSearch
-        style={{ width: "1000px", marginLeft: "20px" }}
+        className="w-full text-lg mx-4 hidden sm:block"
+        dropdownClassName=" rounded-md px-4 focus:outline-none"
+        // style={{ width: "1000px", marginLeft: "20px" }}
         placeholder="Find a Collection"
         optionFilterProp="children"
         onChange={onChange}
+        size="large"
       >
         {NFTCollections &&
           NFTCollections.map((collection, i) => (
-            <Option value={collection.addrs} key={i}>
+            <Option className="text-lg" value={collection.addrs} key={i}>
               {collection.name}
             </Option>
           ))}

@@ -18,6 +18,7 @@ import "./style.css";
 import Text from "antd/lib/typography/Text";
 import MenuItems from "./components/MenuItems";
 import { Transactions } from "components/Transactions";
+import { MobileMenu } from "components/MobileMenu";
 const { Header, Footer } = Layout;
 
 const styles = {
@@ -67,14 +68,13 @@ const App = () => {
   return (
     <Layout style={{ height: "100vh", overflow: "auto" }}>
       <Router>
-        <Header style={styles.header}>
+        <Header className="fixed z-10 w-full bg-[#001529] flex justify-between items-center font-custom border-2 border-solid border-black/[0.06] py-[10px] shadow-[0_1px_10px_rgba(151,164,175,10%)] space-x-4">
           <Logo />
           <SearchCollections setContractAddress={setContractAddress} />
           <MenuItems />
-          <div style={styles.headerRight}>
+          <div className="flex items-center text-sm font-semibold space-x-4">
             <Chains />
-
-            <NativeBalance />
+            <MobileMenu />
             <Account />
           </div>
         </Header>
@@ -146,8 +146,8 @@ const App = () => {
 };
 
 export const Logo = () => (
-  <div style={{ display: "flex" }}>
-    <svg
+  <div className="bg-[#00a3ff] text-center p-2 ">
+    {/* <svg
       width="60"
       height="38"
       viewBox="0 0 50 38"
@@ -166,7 +166,8 @@ export const Logo = () => (
         d="M39.7135 25.1249C37.1094 25.1025 34.9991 27.2127 34.9766 29.8169C34.9542 32.4211 37.0645 34.5313 39.6686 34.5538C41.1503 34.5538 42.5647 33.8578 43.4626 32.6905C43.53 32.6007 43.5973 32.4884 43.6871 32.3986C45.1015 30.221 44.4729 27.3025 42.2953 25.9107C41.532 25.3943 40.634 25.1249 39.7135 25.1249Z"
         fill="#B7E803"
       />
-    </svg>
+    </svg> */}
+    <h1 className="w-28 text-xl text-white font-bold">NFT DUBAI</h1>
   </div>
 );
 

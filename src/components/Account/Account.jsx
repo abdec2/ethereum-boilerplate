@@ -1,13 +1,14 @@
 import { useMoralis } from "react-moralis";
 import { getEllipsisTxt } from "helpers/formatters";
 import Blockie from "../Blockie";
-import { Button, Card, Modal } from "antd";
+import { Button, Card, Dropdown, Modal } from "antd";
 import { useState } from "react";
 import Address from "../Address/Address";
 import { SelectOutlined } from "@ant-design/icons";
 import { getExplorer } from "helpers/networks";
 import Text from "antd/lib/typography/Text";
 import { connectors } from "./config";
+import NativeBalance from "components/NativeBalance";
 const styles = {
   account: {
     height: "42px",
@@ -52,9 +53,15 @@ function Account() {
   if (!isAuthenticated || !account) {
     return (
       <>
-        <div onClick={() => setIsAuthModalVisible(true)}>
-          <p style={styles.text}>Authenticate</p>
+        <div
+          className="w-32 bg-[#00a3ff] py-[8px] px-4 rounded-2xl hover:bg-blue-400 cursor-pointer hidden sm:block"
+          onClick={() => setIsAuthModalVisible(true)}
+        >
+          <a className="text-white hover:text-white">
+            <p className="text-center font-normal">Connect Wallet</p>
+          </a>
         </div>
+
         <Modal
           visible={isAuthModalVisible}
           footer={null}
@@ -103,6 +110,41 @@ function Account() {
     );
   }
 
+  const menu = (
+    <div className="w-96 text-[17px] font-medium bg-gray-800 text-white p-4 rounded-2xl">
+      <div className="p-2 ">
+        <Address avatar="left" size={6} copyable style={{ fontSize: "20px" }} />
+      </div>
+      <Card className="mt-[10px] rounded-2xl p-[15px] bg-transparent border border-solid border-gray-700">
+        <div>
+          <NativeBalance />
+        </div>
+        {/* <div style={{ marginTop: "10px", padding: "0 10px" }}>
+          <a
+            href={`${getExplorer(chainId)}/address/${account}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            <SelectOutlined style={{ marginRight: "5px" }} />
+            View on Explorer
+          </a>
+        </div> */}
+      </Card>
+      <Button
+        size="large"
+        type="default"
+        className="w-full mt-[10px] rounded-full border border-gray-700 bg-transparent hover:bg-transparent hover:border-white text-white hover:text-white"
+        onClick={async () => {
+          await logout();
+          window.localStorage.removeItem("connectorId");
+          setIsModalVisible(false);
+        }}
+      >
+        Disconnect Wallet
+      </Button>
+    </div>
+  );
+
   return (
     <>
       {/* <button
@@ -121,13 +163,25 @@ function Account() {
       >
         Hi
       </button> */}
-      <div style={styles.account} onClick={() => setIsModalVisible(true)}>
+
+      <Dropdown
+        className="bg-transparent hover:bg-slate-50 hover:bg-opacity-20 text-white"
+        overlay={menu}
+        trigger={["click"]}
+        placement="bottomRight"
+      >
+        <div className="rounded-full border-2 border-solid border-[#00a3ff] hover:border-white cursor-pointer">
+          <Blockie currentWallet scale={5} />
+        </div>
+      </Dropdown>
+
+      {/* <div style={styles.account} onClick={() => setIsModalVisible(true)}>
         <p style={{ marginRight: "5px", ...styles.text }}>
           {getEllipsisTxt(account, 6)}
         </p>
-        <Blockie currentWallet scale={3} />
-      </div>
-      <Modal
+        
+      </div> */}
+      {/* <Modal
         visible={isModalVisible}
         footer={null}
         onCancel={() => setIsModalVisible(false)}
@@ -166,14 +220,7 @@ function Account() {
         </Card>
         <Button
           size="large"
-          type="primary"
-          style={{
-            width: "100%",
-            marginTop: "10px",
-            borderRadius: "0.5rem",
-            fontSize: "16px",
-            fontWeight: "500",
-          }}
+          className="w-full mt-[10px] rounded-lg text-[16px] font-medium"
           onClick={async () => {
             await logout();
             window.localStorage.removeItem("connectorId");
@@ -182,7 +229,7 @@ function Account() {
         >
           Disconnect Wallet
         </Button>
-      </Modal>
+      </Modal> */}
     </>
   );
 }

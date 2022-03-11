@@ -20,7 +20,7 @@ const styles = {
   },
 };
 
-const menuItems = [
+export const menuItems = [
   {
     key: "0x1",
     value: "Ethereum",
@@ -88,25 +88,44 @@ function Chains() {
   const { isAuthenticated } = useMoralis();
   const [selected, setSelected] = useState({});
 
-  console.log("chain", chain);
-
   useEffect(() => {
     if (!chainId) return null;
     const newSelected = menuItems.find((item) => item.key === chainId);
     setSelected(newSelected);
-    console.log("current chainId: ", chainId);
   }, [chainId]);
 
   const handleMenuClick = (e) => {
-    console.log("switch to: ", e.key);
-    switchNetwork(e.key);
+    if (e.key !== chainId) {
+      switchNetwork(e.key).then(() => {
+        window.location.reload();
+      });
+    }
   };
 
+  // item: {
+  //   display: "flex",
+  //   alignItems: "center",
+  //   height: "42px",
+  //   fontWeight: "500",
+  //   fontFamily: "Roboto, sans-serif",
+  //   fontSize: "14px",
+  //   padding: "0 10px",
+  // },
+  // button: {
+  //   border: "2px solid rgb(231, 234, 243)",
+  //   borderRadius: "12px",
+  // },
   const menu = (
-    <Menu onClick={handleMenuClick}>
+    <Menu onClick={handleMenuClick} className="rounded-xl bg-[#001529]">
       {menuItems.map((item) => (
-        <Menu.Item key={item.key} icon={item.icon} style={styles.item}>
-          <span style={{ marginLeft: "5px" }}>{item.value}</span>
+        <Menu.Item
+          key={item.key}
+          icon={item.icon}
+          className="flex item-center h-[42px] font-medium font-custom text-sm py-[10px] hover:bg-transparent group"
+        >
+          <span className="ml-[5px] text-white group-hover:text-[#00a3ff]">
+            {item.value}
+          </span>
         </Menu.Item>
       ))}
     </Menu>
@@ -116,11 +135,16 @@ function Chains() {
 
   return (
     <div>
-      <Dropdown overlay={menu} trigger={["click"]}>
+      <Dropdown
+        className="bg-transparent hover:bg-slate-50 hover:bg-opacity-20 text-white"
+        overlay={menu}
+        trigger={["click"]}
+      >
         <Button
           key={selected?.key}
           icon={selected?.icon}
-          style={{ ...styles.button, ...styles.item }}
+          className="flex items-center h-[42px] font-medium font-custom text-sm py-[10px] rounded-3xl outline-none border-2 border-solid border-[#00a3ff] active:bg-transparent focus:bg-transparent"
+          // style={{ ...styles.button, ...styles.item }}
         >
           <span style={{ marginLeft: "5px" }}>{selected?.value}</span>
           <DownOutlined />
