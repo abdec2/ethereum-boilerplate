@@ -107,7 +107,7 @@ function AccountMM() {
           </div>
         </Modal>
       </div>
-    )
+    );
   } else return null;
 }
 
