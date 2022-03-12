@@ -134,23 +134,22 @@ function Chains() {
   if (!chainId || !isAuthenticated) return null;
 
   return (
-    <div>
-      <Dropdown
-        className="bg-transparent hover:bg-slate-50 hover:bg-opacity-20 text-white"
-        overlay={menu}
-        trigger={["click"]}
+
+    <Dropdown
+      className="bg-transparent hover:bg-slate-50 hover:bg-opacity-20 text-white"
+      overlay={menu}
+      trigger={["click"]}
+    >
+      <Button
+        key={selected?.key}
+        icon={selected?.icon}
+        className="flex items-center h-[42px] font-medium font-custom text-sm py-[10px] rounded-3xl outline-none border-2 border-solid border-[#00a3ff] active:bg-transparent focus:bg-transparent"
+      // style={{ ...styles.button, ...styles.item }}
       >
-        <Button
-          key={selected?.key}
-          icon={selected?.icon}
-          className="flex items-center h-[42px] font-medium font-custom text-sm py-[10px] rounded-3xl outline-none border-2 border-solid border-[#00a3ff] active:bg-transparent focus:bg-transparent"
-          // style={{ ...styles.button, ...styles.item }}
-        >
-          <span style={{ marginLeft: "5px" }}>{selected?.value}</span>
-          <DownOutlined />
-        </Button>
-      </Dropdown>
-    </div>
+        <span style={{ marginLeft: "5px" }}>{selected?.value}</span>
+        <DownOutlined />
+      </Button>
+    </Dropdown>
   );
 }
 

@@ -68,12 +68,14 @@ const App = () => {
   return (
     <Layout style={{ height: "100vh", overflow: "auto" }}>
       <Router>
-        <Header className="fixed z-10 w-full bg-[#001529] flex justify-between items-center font-custom border-2 border-solid border-black/[0.06] py-[10px] shadow-[0_1px_10px_rgba(151,164,175,10%)] space-x-4">
+        <Header className="fixed z-10 w-full bg-[#001529] flex justify-between items-center font-custom border-2 border-solid border-black/[0.06] px-4 py-2 shadow-[0_1px_10px_rgba(151,164,175,10%)] space-x-4">
           <Logo />
           <SearchCollections setContractAddress={setContractAddress} />
           <MenuItems />
           <div className="flex items-center text-sm font-semibold space-x-4">
-            <Chains />
+            <div className="hidden sm:flex">
+              <Chains />
+            </div>
             <MobileMenu />
             <Account />
           </div>

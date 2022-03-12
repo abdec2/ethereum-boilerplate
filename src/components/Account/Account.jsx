@@ -54,7 +54,7 @@ function Account() {
     return (
       <>
         <div
-          className="w-32 bg-[#00a3ff] py-[8px] px-4 rounded-2xl hover:bg-blue-400 cursor-pointer hidden sm:block"
+          className="hidden sm:flex w-32 bg-[#00a3ff] py-[8px] px-4 rounded-2xl hover:bg-blue-400 cursor-pointer"
           onClick={() => setIsAuthModalVisible(true)}
         >
           <a className="text-white hover:text-white">
@@ -111,7 +111,7 @@ function Account() {
   }
 
   const menu = (
-    <div className="w-96 text-[17px] font-medium bg-gray-800 text-white p-4 rounded-2xl">
+    <div className="w-full text-[17px] font-medium bg-gray-800 text-white p-4 rounded-2xl">
       <div className="p-2 ">
         <Address avatar="left" size={6} copyable style={{ fontSize: "20px" }} />
       </div>
