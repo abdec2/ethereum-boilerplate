@@ -67,7 +67,10 @@ const App = () => {
   }, [isAuthenticated, isWeb3Enabled]);
 
   return (
-    <Layout className="bg-[#0C1446]" style={{ height: "100vh", overflow: "auto" }}>
+    <Layout
+      className="bg-[#0C1446]"
+      style={{ height: "100vh", overflow: "auto" }}
+    >
       <Router>
         <Header className="fixed z-10 w-full bg-[#0C1446]/[0.9] flex justify-between items-center font-custom border-2 border-solid border-black/[0.06] px-4 py-2 shadow-[0_1px_10px_rgba(151,164,175,10%)] space-x-4">
           <Logo />
@@ -110,7 +113,6 @@ const App = () => {
         </div>
       </Router>
       <FooterComponent />
-
     </Layout>
   );
 };
@@ -137,7 +139,9 @@ export const Logo = () => (
         fill="#B7E803"
       />
     </svg> */}
-    <NavLink to="/" ><h1 className="w-28 text-xl text-white font-bold">NFT DUBAI</h1></NavLink>
+    <NavLink to="/">
+      <h1 className="w-28 text-xl text-white font-bold">NFT DUBAI</h1>
+    </NavLink>
   </div>
 );
 

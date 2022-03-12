@@ -1,11 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- /* https://www.canva.com/colors/color-palettes/soft-focus-forest/ */
+/* https://www.canva.com/colors/color-palettes/soft-focus-forest/ */
 
 body {
   background: #175873;
-  color: #87ACA3;
+  color: #87aca3;
 }
 
 .ant-select-selection-search-input {
@@ -45,12 +45,13 @@ body {
 
 .ant-menu.ant-menu-dark {
   background: none;
-  color: #87ACA3;
+  color: #87aca3;
 }
 
-.ant-menu-dark .ant-menu-sub, .ant-menu.ant-menu-dark .ant-menu-sub {
-  background: #0C1446;
-  color: #87ACA3;
+.ant-menu-dark .ant-menu-sub,
+.ant-menu.ant-menu-dark .ant-menu-sub {
+  background: #0c1446;
+  color: #87aca3;
 }
 /* *,
 *::before,
