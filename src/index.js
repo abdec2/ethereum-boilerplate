@@ -20,7 +20,7 @@ const Application = () => {
     );
   if (isServerInfo)
     return (
-      <MoralisProvider appId={APP_ID} serverUrl={SERVER_URL} >
+      <MoralisProvider appId={APP_ID} serverUrl={SERVER_URL}>
         <App isServerInfo />
       </MoralisProvider>
     );

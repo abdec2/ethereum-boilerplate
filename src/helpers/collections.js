@@ -26,7 +26,7 @@ export const networkCollections = {
         "https://lh3.googleusercontent.com/gpx1o8uOks9O1gKZuZ299PD4hx-Wk8RsNe6bDUunhwir7ezy6sfgvGJxgagPXI_F81EnShgQpaRnT2lrGKArSmcdUNOPXFZkecWxka4=w600",
       name: "Cyan Fake Mutant Ape Yacht Club",
       addrs: "0x2303198eCF83c7c21ad24708bCD184fAe281eec3",
-    }
+    },
   ],
 
   "0x1": [
