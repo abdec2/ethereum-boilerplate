@@ -27,7 +27,7 @@ function MenuItems() {
       <Menu
         theme="dark"
         mode="horizontal"
-        className="flex text-[17px] w-full justify-start font-medium"
+        className="flex text-[17px] w-full justify-start font-medium "
         defaultSelectedKeys={[pathname]}
       >
         <Menu.Item key="/nftMarket">

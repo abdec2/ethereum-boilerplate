@@ -5,6 +5,7 @@ import {
   Switch,
   Route,
   Redirect,
+  NavLink,
 } from "react-router-dom";
 import Account from "components/Account/Account";
 import Chains from "components/Chains";
@@ -13,13 +14,13 @@ import NFTTokenIds from "components/NFTTokenIds";
 import SearchCollections from "components/SearchCollections";
 import { Layout } from "antd";
 import "antd/dist/antd.css";
-import NativeBalance from "components/NativeBalance";
 import "./style.css";
-import Text from "antd/lib/typography/Text";
 import MenuItems from "./components/MenuItems";
 import { Transactions } from "components/Transactions";
 import { MobileMenu } from "components/MobileMenu";
-const { Header, Footer } = Layout;
+import { FooterComponent } from "components/FooterComponent";
+import { HomePage } from "components/HomePage";
+const { Header } = Layout;
 
 const styles = {
   content: {
@@ -66,9 +67,9 @@ const App = () => {
   }, [isAuthenticated, isWeb3Enabled]);
 
   return (
-    <Layout style={{ height: "100vh", overflow: "auto" }}>
+    <Layout className="bg-[#0C1446]" style={{ height: "100vh", overflow: "auto" }}>
       <Router>
-        <Header className="fixed z-10 w-full bg-[#001529] flex justify-between items-center font-custom border-2 border-solid border-black/[0.06] px-4 py-2 shadow-[0_1px_10px_rgba(151,164,175,10%)] space-x-4">
+        <Header className="fixed z-10 w-full bg-[#0C1446]/[0.9] flex justify-between items-center font-custom border-2 border-solid border-black/[0.06] px-4 py-2 shadow-[0_1px_10px_rgba(151,164,175,10%)] space-x-4">
           <Logo />
           <SearchCollections setContractAddress={setContractAddress} />
           <MenuItems />
@@ -81,7 +82,7 @@ const App = () => {
           </div>
         </Header>
 
-        <div style={styles.content}>
+        <div className="flex items-center font-custom text-[#041836] mt-32 p-3">
           <Switch>
             <Route path="/nftMarket">
               <NFTTokenIds
@@ -99,7 +100,7 @@ const App = () => {
             </Route>
 
             <Route exact path="/">
-              <Redirect to="/nftMarket" />
+              <HomePage />
             </Route>
 
             <Route path="/nonauthenticated">
@@ -108,41 +109,8 @@ const App = () => {
           </Switch>
         </div>
       </Router>
-      <Footer style={{ textAlign: "center" }}>
-        <Text style={{ display: "block" }}>
-          ⭐️ Please star this{" "}
-          <a
-            href="https://github.com/ethereum-boilerplate/ethereum-boilerplate/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            boilerplate
-          </a>
-          , every star makes us very happy!
-        </Text>
+      <FooterComponent />
 
-        <Text style={{ display: "block" }}>
-          🙋 You have questions? Ask them on the {""}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://forum.moralis.io/t/ethereum-boilerplate-questions/3951/29"
-          >
-            Moralis forum
-          </a>
-        </Text>
-
-        <Text style={{ display: "block" }}>
-          📖 Read more about{" "}
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            href="https://moralis.io?utm_source=boilerplatehosted&utm_medium=todo&utm_campaign=ethereum-boilerplat"
-          >
-            Moralis
-          </a>
-        </Text>
-      </Footer>
     </Layout>
   );
 };
@@ -169,7 +137,7 @@ export const Logo = () => (
         fill="#B7E803"
       />
     </svg> */}
-    <h1 className="w-28 text-xl text-white font-bold">NFT DUBAI</h1>
+    <NavLink to="/" ><h1 className="w-28 text-xl text-white font-bold">NFT DUBAI</h1></NavLink>
   </div>
 );
 
