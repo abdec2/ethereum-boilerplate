@@ -19,7 +19,7 @@ import MenuItems from "./components/MenuItems";
 import { Transactions } from "components/Transactions";
 import { MobileMenu } from "components/MobileMenu";
 import { FooterComponent } from "components/FooterComponent";
-import { HomePage } from "components/HomePage";
+import HomePage from "components/HomePage";
 const { Header } = Layout;
 
 const styles = {
@@ -68,11 +68,11 @@ const App = () => {
 
   return (
     <Layout
-      className="bg-[#0C1446]"
+      className="bg-[#04111d]"
       style={{ height: "100vh", overflow: "auto" }}
     >
       <Router>
-        <Header className="fixed z-10 w-full bg-[#0C1446]/[0.9] flex justify-between items-center font-custom border-2 border-solid border-black/[0.06] px-4 py-2 shadow-[0_1px_10px_rgba(151,164,175,10%)] space-x-4">
+        <Header className="fixed z-10 w-full bg-[#04111d]/[0.7] flex justify-between items-center font-custom border-2 border-solid border-black/[0.06] px-4 py-2 shadow-[0_1px_10px_rgba(151,164,175,10%)] space-x-4">
           <Logo />
           <SearchCollections setContractAddress={setContractAddress} />
           <MenuItems />
@@ -85,7 +85,7 @@ const App = () => {
           </div>
         </Header>
 
-        <div className="flex items-center font-custom text-[#041836] mt-32 p-3">
+        <div>
           <Switch>
             <Route path="/nftMarket">
               <NFTTokenIds
@@ -102,7 +102,7 @@ const App = () => {
               <NFTBalance />
             </Route>
 
-            <Route exact path="/">
+            <Route path="/">
               <HomePage />
             </Route>
 

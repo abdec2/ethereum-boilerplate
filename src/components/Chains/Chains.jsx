@@ -36,11 +36,11 @@ export const menuItems = [
   //   value: "Ropsten Testnet",
   //   icon: <ETHLogo />,
   // },
-  // {
-  //   key: "0x4",
-  //   value: "Rinkeby Testnet",
-  //   icon: <ETHLogo />,
-  // },
+  {
+    key: "0x4",
+    value: "Rinkeby Testnet",
+    icon: <ETHLogo />,
+  },
   // {
   //   key: "0x2a",
   //   value: "Kovan Testnet",

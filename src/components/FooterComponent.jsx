@@ -5,38 +5,20 @@ const { Footer } = Layout;
 
 export const FooterComponent = () => {
   return (
-    <Footer className="text-center bg-[#0C1446] ">
+    <Footer className="text-center bg-[#04111d] ">
       <Text className="block text-[#87ACA3]">
-        ⭐️ Please star this{" "}
-        <a
-          href="https://github.com/ethereum-boilerplate/ethereum-boilerplate/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          boilerplate
-        </a>
-        , every star makes us very happy!
+        © NFTDubai, Inc. All rights reserved.
       </Text>
 
       <Text className="block text-[#87ACA3]">
-        🙋 You have questions? Ask them on the {""}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://forum.moralis.io/t/ethereum-boilerplate-questions/3951/29"
-        >
-          Moralis forum
+        <a target="_blank" rel="noopener noreferrer" href="#">
+          Privacy Policy
         </a>
       </Text>
 
       <Text className="block text-[#87ACA3]">
-        📖 Read more about{" "}
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href="https://moralis.io?utm_source=boilerplatehosted&utm_medium=todo&utm_campaign=ethereum-boilerplat"
-        >
-          Moralis
+        <a target="_blank" rel="noopener noreferrer" href="#">
+          Terms & Conditions
         </a>
       </Text>
     </Footer>

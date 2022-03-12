@@ -111,7 +111,7 @@ function Account() {
   }
 
   const menu = (
-    <div className="w-full text-[17px] font-medium bg-gray-800 text-white p-4 rounded-2xl">
+    <div className="w-full text-[17px] font-medium bg-slate-900 text-white p-4 rounded-2xl ">
       <div className="p-2 ">
         <Address avatar="left" size={6} copyable style={{ fontSize: "20px" }} />
       </div>

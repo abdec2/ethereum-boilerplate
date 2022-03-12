@@ -1,10 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* https://www.canva.com/colors/color-palettes/soft-focus-forest/ */
 
 body {
-  background: #175873;
+  background: #04111d;
   color: #87aca3;
 }
 
@@ -50,7 +49,7 @@ body {
 
 .ant-menu-dark .ant-menu-sub,
 .ant-menu.ant-menu-dark .ant-menu-sub {
-  background: #0c1446;
+  background: #04111d;
   color: #87aca3;
 }
 /* *,

@@ -14,6 +14,20 @@ export const networkCollections = {
       addrs: "0xCA34404dD8Bd6537BE76F3A51B379F8949bD7973",
     },
   ],
+  "0x4": [
+    {
+      image:
+        "https://lh3.googleusercontent.com/rpeCxtPyoM3IHrKauQHZjTWKFGF41u1pn2IN363ofBPc1aZVPpVjS_WTxq8Wj627-uebJ0auXJwHRyCtgQQsQC3K7QhlMQEXmZ1S=s0",
+      name: "Fake Bored Ape Yacht Club",
+      addrs: "0x7470Ea065E50e3862cd9b8fB7C77712165da80e5",
+    },
+    {
+      image:
+        "https://lh3.googleusercontent.com/gpx1o8uOks9O1gKZuZ299PD4hx-Wk8RsNe6bDUunhwir7ezy6sfgvGJxgagPXI_F81EnShgQpaRnT2lrGKArSmcdUNOPXFZkecWxka4=w600",
+      name: "Cyan Fake Mutant Ape Yacht Club",
+      addrs: "0x2303198eCF83c7c21ad24708bCD184fAe281eec3",
+    }
+  ],
 
   "0x1": [
     {

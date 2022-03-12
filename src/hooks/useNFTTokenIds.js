@@ -28,7 +28,7 @@ export const useNFTTokenIds = (address) => {
     {
       chain: chainId,
       address,
-      limit: 10,
+      limit: 12,
     },
     { autoFetch: !!token && address !== "explore" },
   );
