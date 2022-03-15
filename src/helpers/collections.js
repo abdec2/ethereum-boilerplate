@@ -13,7 +13,6 @@ export const networkCollections = {
       name: "Pixel Show",
       addrs: "0xCA34404dD8Bd6537BE76F3A51B379F8949bD7973",
     },
-
   ],
   "0x4": [
     {
