@@ -13,6 +13,7 @@ export const networkCollections = {
       name: "Pixel Show",
       addrs: "0xCA34404dD8Bd6537BE76F3A51B379F8949bD7973",
     },
+
   ],
   "0x4": [
     {
@@ -26,6 +27,18 @@ export const networkCollections = {
         "https://lh3.googleusercontent.com/gpx1o8uOks9O1gKZuZ299PD4hx-Wk8RsNe6bDUunhwir7ezy6sfgvGJxgagPXI_F81EnShgQpaRnT2lrGKArSmcdUNOPXFZkecWxka4=w600",
       name: "Cyan Fake Mutant Ape Yacht Club",
       addrs: "0x2303198eCF83c7c21ad24708bCD184fAe281eec3",
+    },
+    {
+      image:
+        "https://gateway.ipfs.io/ipfs/QmSCAVFfUqw7u1cuUMcQS9nNNnht6k6gy2SpB3iquE1LJY/14.png",
+      name: "CoolPigz",
+      addrs: "0x070eb9b8e83a1866f1b7a1d58c6b984c7bff53a9",
+    },
+    {
+      image:
+        "https://gateway.ipfs.io/ipfs/QmYiF4A3cS2mfY7rUE9Sr22wHg5KCXyxZ7yYnKXYeco4Wp/12.png",
+      name: "Royal Falcon",
+      addrs: "0x0cdef11df7338849b2dde8e8f35d7ee62697b94c",
     },
   ],
 
