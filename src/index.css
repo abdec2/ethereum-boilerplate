@@ -53,13 +53,20 @@ body {
   color: #87aca3;
 }
 
-.btn-grad {background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)}
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #314755 0%,
+    #26a0da 51%,
+    #314755 100%
+  );
+}
 .btn-grad {
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
   background-size: 200% auto;
-  color: white;            
+  color: white;
 }
 
 .btn-grad:hover {
@@ -67,4 +74,3 @@ body {
   color: #fff;
   text-decoration: none;
 }
-         

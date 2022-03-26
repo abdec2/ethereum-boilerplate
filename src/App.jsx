@@ -21,7 +21,7 @@ import { MobileMenu } from "components/MobileMenu";
 import { FooterComponent } from "components/FooterComponent";
 import HomePage from "components/HomePage";
 import Plans from "components/Plans";
-import 'animate.css'
+import "animate.css";
 const { Header } = Layout;
 
 const styles = {
