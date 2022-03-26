@@ -20,6 +20,8 @@ import { Transactions } from "components/Transactions";
 import { MobileMenu } from "components/MobileMenu";
 import { FooterComponent } from "components/FooterComponent";
 import HomePage from "components/HomePage";
+import Plans from "components/Plans";
+import 'animate.css'
 const { Header } = Layout;
 
 const styles = {
@@ -100,6 +102,10 @@ const App = () => {
 
             <Route path="/nftBalance">
               <NFTBalance />
+            </Route>
+
+            <Route path="/plans">
+              <Plans />
             </Route>
 
             <Route path="/">
