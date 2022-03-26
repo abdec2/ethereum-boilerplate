@@ -23,40 +23,40 @@ const Plans = () => {
         >
           <ul className="space-y-2">
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Lorem ipsum dolor</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Whitepaper</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Pellentesque</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Website</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Ut tincidunt</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Social Media</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Quisque dignissim</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Token Creation</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Vestibulum ut</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Marketing</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">In sagittis sem</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Private Presale</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Maecenas et</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Public Sale</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Fusce vitae erat</span>{" "}
+              <CheckOutlined /> <span className="ml-6">DEX Listing</span>{" "}
             </li>
             <li className="flex items-center truncate line-through">
-              <CloseOutlined /> <span className="ml-6">Vestibulum ut</span>{" "}
+              <CloseOutlined /> <span className="ml-6">CMC Listing</span>{" "}
             </li>
             <li className="flex items-center truncate line-through">
-              <CloseOutlined /> <span className="ml-6">In sagittis sem</span>{" "}
+              <CloseOutlined /> <span className="ml-6">CG Listing</span>{" "}
             </li>
             <li className="flex items-center truncate line-through">
-              <CloseOutlined /> <span className="ml-6">Maecenas et</span>{" "}
+              <CloseOutlined /> <span className="ml-6">CEX Listing</span>{" "}
             </li>
             <li className="flex items-center truncate line-through">
-              <CloseOutlined /> <span className="ml-6">Fusce vitae erat</span>{" "}
+              <CloseOutlined /> <span className="ml-6">Continuous Marketing</span>{" "}
             </li>
           </ul>
         </PlanCard>
@@ -69,40 +69,40 @@ const Plans = () => {
         >
           <ul className="space-y-2">
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Lorem ipsum dolor</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Whitepaper</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Pellentesque</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Website</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Ut tincidunt</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Social Media</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Quisque dignissim</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Token Creation</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Vestibulum ut</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Marketing</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">In sagittis sem</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Private Presale</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Maecenas et</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Public Sale</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Fusce vitae erat</span>{" "}
+              <CheckOutlined /> <span className="ml-6">DEX Listing</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Vestibulum ut</span>{" "}
+              <CheckOutlined /> <span className="ml-6">CMC Listing</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">In sagittis sem</span>{" "}
+              <CheckOutlined /> <span className="ml-6">CG Listing</span>{" "}
             </li>
             <li className="flex items-center truncate line-through">
-              <CloseOutlined /> <span className="ml-6">Maecenas et</span>{" "}
+              <CloseOutlined /> <span className="ml-6">CEX Listing</span>{" "}
             </li>
             <li className="flex items-center truncate line-through">
-              <CloseOutlined /> <span className="ml-6">Fusce vitae erat</span>{" "}
+              <CloseOutlined /> <span className="ml-6">Continuous Marketing</span>{" "}
             </li>
           </ul>
         </PlanCard>
@@ -115,40 +115,40 @@ const Plans = () => {
         >
           <ul className="space-y-2">
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Lorem ipsum dolor</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Whitepaper</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Pellentesque</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Website</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Ut tincidunt</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Social Media</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Quisque dignissim</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Token Creation</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Vestibulum ut</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Marketing</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">In sagittis sem</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Private Presale</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Maecenas et</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Public Sale</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Fusce vitae erat</span>{" "}
+              <CheckOutlined /> <span className="ml-6">DEX Listing</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Vestibulum ut</span>{" "}
+              <CheckOutlined /> <span className="ml-6">CMC Listing</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">In sagittis sem</span>{" "}
+              <CheckOutlined /> <span className="ml-6">CG Listing</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Maecenas et</span>{" "}
+              <CheckOutlined /> <span className="ml-6">CEX Listing</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Fusce vitae erat</span>{" "}
+              <CheckOutlined /> <span className="ml-6">Continuous Marketing</span>{" "}
             </li>
           </ul>
         </PlanCard>

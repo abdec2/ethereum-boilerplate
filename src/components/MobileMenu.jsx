@@ -82,6 +82,16 @@ export const MobileMenu = () => {
             </NavLink>
           </div>
 
+          <div className="px-2 py-4 mx-2 text-xl">
+            <NavLink
+              className="text-white "
+              to="/plans"
+              onClick={() => setVisible(false)}
+            >
+              Plans
+            </NavLink>
+          </div>
+
           <AccountMM />
         </div>
 

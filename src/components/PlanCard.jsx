@@ -2,7 +2,7 @@ import { ETHLogo } from "./Chains/Logos";
 
 const PlanCard = ({ img, plan, children, price, animationClass }) => {
   return (
-    <div className={`w-80 p-4 bg-gray-800 rounded-lg ${animationClass}`}>
+    <div className={`w-full sm:w-80 p-4 bg-gray-800 rounded-lg ${animationClass}`}>
       <div className="space-y-2">
         <h3 className=" text-white text-xl font-medium leading-7 truncate">
           {plan}
