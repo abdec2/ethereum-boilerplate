@@ -56,7 +56,8 @@ const Plans = () => {
               <CloseOutlined /> <span className="ml-6">CEX Listing</span>{" "}
             </li>
             <li className="flex items-center truncate line-through">
-              <CloseOutlined /> <span className="ml-6">Continuous Marketing</span>{" "}
+              <CloseOutlined />{" "}
+              <span className="ml-6">Continuous Marketing</span>{" "}
             </li>
           </ul>
         </PlanCard>
@@ -102,7 +103,8 @@ const Plans = () => {
               <CloseOutlined /> <span className="ml-6">CEX Listing</span>{" "}
             </li>
             <li className="flex items-center truncate line-through">
-              <CloseOutlined /> <span className="ml-6">Continuous Marketing</span>{" "}
+              <CloseOutlined />{" "}
+              <span className="ml-6">Continuous Marketing</span>{" "}
             </li>
           </ul>
         </PlanCard>
@@ -148,7 +150,8 @@ const Plans = () => {
               <CheckOutlined /> <span className="ml-6">CEX Listing</span>{" "}
             </li>
             <li className="flex items-center truncate ">
-              <CheckOutlined /> <span className="ml-6">Continuous Marketing</span>{" "}
+              <CheckOutlined />{" "}
+              <span className="ml-6">Continuous Marketing</span>{" "}
             </li>
           </ul>
         </PlanCard>
